@@ -1,0 +1,28 @@
+{
+  "name": "clean-node-api",
+  "version": "0.0.1",
+  "description": "Node API with clean architecture",
+  "scripts": {
+    "start": "node dist/index.js",
+    "build": "rimraf dist && tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "clean",
+    "node",
+    "typescript"
+  ],
+  "author": "Henrique",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^16.7.8",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.4.2"
+  },
+  "dependencies": {
+    "module-alias": "^2.2.2"
+  },
+  "_moduleAliases": {
+    "~": "dist"
+  }
+}
