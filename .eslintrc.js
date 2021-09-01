@@ -11,6 +11,23 @@ module.exports = {
   },
   plugins: ['@typescript-eslint', 'prettier'],
   rules: {
+    'import/extensions': [
+      'error',
+      'ignorePackages',
+      {
+        js: 'never',
+        jsx: 'never',
+        ts: 'never',
+        tsx: 'never',
+      },
+    ],
     'prettier/prettier': 'error',
   },
-}
+  settings: {
+    'import/resolver': {
+      alias: {
+        map: [['~', './src']],
+      },
+    },
+  },
+};
