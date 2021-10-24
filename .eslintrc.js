@@ -11,6 +11,7 @@ module.exports = {
   },
   plugins: ['@typescript-eslint', 'prettier'],
   rules: {
+    'import/prefer-default-export': 'off',
     'import/extensions': [
       'error',
       'ignorePackages',
@@ -27,6 +28,7 @@ module.exports = {
     'import/resolver': {
       alias: {
         map: [['~', './src']],
+        extensions: ['.ts', '.js', '.jsx', '.json'],
       },
     },
   },
