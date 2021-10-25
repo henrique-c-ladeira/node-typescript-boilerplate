@@ -4,9 +4,14 @@
   "description": "Node API with clean architecture",
   "scripts": {
     "prepare": "husky install",
+    "lint": "eslint .",
+    "lint:fix": "yarn lint -- --fix",
+    "test": "jest --passWithNoTests --no-cache --runInBand",
+    "test:watch": "npm t -- --watch",
+    "test:staged": "npm t -- --findRelatedTests",
+    "test:coverage": "npm t -- --coverage",
     "start": "node dist/index.js",
-    "build": "rimraf dist && tsc",
-    "test": "jest"
+    "build": "rimraf dist && tsc"
   },
   "keywords": [
     "clean",
@@ -29,6 +34,7 @@
     "eslint-plugin-prettier": "^4.0.0",
     "husky": "^7.0.4",
     "jest": "^27.3.1",
+    "lint-staged": ">=10",
     "prettier": "^2.3.2",
     "rimraf": "^3.0.2",
     "ts-jest": "^27.0.7",
